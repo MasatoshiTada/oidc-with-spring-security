@@ -1,0 +1,30 @@
+issuer.uri: http://localhost:9000/auth/realms/hello-api
+auth-server.uri: ${issuer.uri}/protocol/openid-connect
+
+spring.security.oauth2.client.registration.hello:
+  provider: hello
+  client-id: hello-client
+  client-secret: e44c86e5-eef2-49de-a005-de706e5bfebe
+  client-authentication-method: basic
+  redirect-uri: http://localhost:8080/login/oauth2/code/hello-client
+  authorization-grant-type: authorization_code
+  scope: profile, openid
+  client-name: hello-client
+
+spring.security.oauth2.client.provider.hello:
+  #  authorization-uri: ${auth-server.uri}/auth
+  #  token-uri: ${auth-server.uri}/token
+  #  user-info-uri: ${auth-server.uri}/userinfo
+  #  user-info-authentication-method: basic
+  user-name-attribute: preferred_username
+  #  jwk-set-uri: ${auth-server.uri}/certs  # not necessary if using Keycloak
+  issuer-uri: ${issuer.uri}
+
+logging:
+  level:
+    com.example: debug
+    org.springframework:
+      security: trace
+      web:
+        client:
+          RestTemplate: debug
