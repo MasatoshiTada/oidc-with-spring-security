@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>oidc-rp-sample</artifactId>
+    <artifactId>oidc-with-spring-security</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>oidc-rp-sample</name>
+    <name>oidc-with-spring-security</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>

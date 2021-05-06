@@ -1,4 +1,4 @@
-oidc-rp-sample
+oidc-with-spring-security
 ==============
 JJUG CCC 2021 Springのセッション[OpenID Connect 1.0 with Spring Security]のサンプルコードです。
 
